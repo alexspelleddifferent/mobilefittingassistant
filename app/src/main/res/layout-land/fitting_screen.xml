@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FittingActivity"
+    android:background="@drawable/rifter">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/vertical_guideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <TextView
+        android:id="@+id/ship_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:background="@color/background_color_darker"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"/>
+
+    <TextView
+        android:id="@+id/slot_label_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/top_label"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:background="@color/background_color_darker"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/ship_name"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/slots_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/slot_label_1"
+        app:layout_constraintBottom_toTopOf="@id/slot_label_2"
+        tools:listitem="@layout/module" />
+
+    <TextView
+        android:id="@+id/slot_label_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/middle_label"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:background="@color/background_color_darker"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/slots_1"
+        app:layout_constraintBottom_toTopOf="@id/slots_2"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/slots_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/slot_label_2"
+        app:layout_constraintBottom_toTopOf="@id/slot_label_3"
+        tools:listitem="@layout/module"/>
+
+    <TextView
+        android:id="@+id/slot_label_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_label"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:background="@color/background_color_darker"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/slots_2"
+        app:layout_constraintBottom_toTopOf="@id/slots_3"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/slots_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/slot_label_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/module"/>
+
+    <LinearLayout
+        android:id="@+id/ship_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/background_color_darker"
+        android:padding="16dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/shields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:background="@color/background_color_lighter"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/armor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:background="@color/background_color_lighter"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/dps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:background="@color/background_color_lighter"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/repair_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:background="@color/background_color_lighter"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/cap_stability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:background="@color/background_color_lighter"
+            android:text="TextView" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">mobile fitting assistant</string>
+    <string name="welcome_message">Hello! Waiting to get stats for %s</string>
+    <string name="top_label">High Slots</string>
+    <string name="middle_label">Medium Slots</string>
+    <string name="bottom_label">Low Slots</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "682342155454",
+    "project_id": "mobile-fitting-assistant",
+    "storage_bucket": "mobile-fitting-assistant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682342155454:android:d41d2e400e18bf4514caef",
+        "android_client_info": {
+          "package_name": "com.example.mobilefittingassistant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjULOIyxtq7myfygPiegN54WUf-DNPTvY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
